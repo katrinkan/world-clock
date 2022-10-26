@@ -3,8 +3,6 @@ const hongKongElement = document.querySelector("#hong-kong");
 const aucklandElement = document.querySelector("#auckland");
 
 function updateTime() {
-  // current location
-
   // Barcelona
   if (barcelonaElement) {
     const barcelonaDateElement = barcelonaElement.querySelector(".date");
@@ -37,7 +35,7 @@ function updateTime() {
     )}`;
   }
 }
-if (barcelonaElement && hongKongElement) {
+if (barcelonaElement && hongKongElement && aucklandElement) {
   updateTime();
   setInterval(updateTime, 1000);
 }
