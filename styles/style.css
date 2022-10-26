@@ -39,7 +39,6 @@ h2 {
   font-weight: 400;
 }
 footer {
-  padding-top: 40px;
   text-align: center;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -67,7 +66,7 @@ button:hover {
 
 .container {
   max-width: 40%;
-  margin: 60px auto;
+  margin: 60px auto 10px auto;
   background-color: black;
   padding: 20px;
   border-radius: 20px;
@@ -125,13 +124,10 @@ button:hover {
   h2 {
     font-size: 16px;
   }
-  footer {
-    padding-top: 20px;
-  }
 
   .container {
     max-width: 80%;
-    margin: 30px auto;
+    margin: 30px auto 10px auto;
     padding: 20px;
     overflow: hidden;
   }
