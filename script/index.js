@@ -61,11 +61,19 @@ function updateCity(event) {
             "h:mm:ss [<small>]A[</small>]"
           )}</div>
         </div>
-        <button type='button' onclick='window.location.reload()'>Back to all cities</button>`;
+        <button type='button' onclick='window.location.reload()' class='change-city-btn'>Back to all cities</button>`;
   }
   displayNewTime();
   setInterval(displayNewTime, 1000);
 }
+
+function changeTheme() {
+  const html = document.querySelector("html");
+  html.classList.toggle("light");
+}
+
+const button = document.querySelector(".change-theme-btn");
+button.addEventListener("click", changeTheme);
 
 const citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);

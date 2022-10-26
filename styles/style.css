@@ -17,6 +17,8 @@ h1 {
   font-size: 48px;
   font-family: "Codystar", cursive;
   padding-bottom: 20px;
+  margin-top: 20px;
+  display: block;
 }
 h1 a {
   text-decoration: none;
@@ -41,25 +43,38 @@ footer {
   color: rgba(0, 0, 0, 0.8);
 }
 button {
-  display: block;
-  margin: 30px auto;
-  padding: 10px 10px;
   border-radius: 30px;
   font-size: 14px;
-  background-color: #ea9aba;
-  border: 1px solid black;
+  background-color: #ecd837;
+  border: none;
   color: white;
+  display: block;
+  padding: 10px;
 }
 button:hover {
-  background-color: #ecd837;
+  background-color: #ea9aba;
 }
+.change-theme-btn {
+  float: right;
+}
+.theme-change {
+  padding-bottom: 30px;
+}
+.change-city-btn {
+  margin: 30px auto;
+}
+
 .container {
   max-width: 40%;
   margin: 60px auto 0 auto;
   background-color: black;
-  padding: 60px;
+  padding: 20px;
   border-radius: 20px;
 }
+.container-content {
+  padding: 30px 40px;
+}
+
 .city {
   display: flex;
   justify-content: space-between;
@@ -81,6 +96,24 @@ button:hover {
 .date {
   opacity: 0.7;
 }
+
+.light body {
+  color: black;
+  background: repeating-linear-gradient(
+    to right,
+    #6fd885 0px,
+    #6fd885 40px,
+    #ecd837 40px,
+    #ecd837 80px
+  );
+}
+.light .container {
+  background-color: white;
+}
+.light a {
+  color: black;
+}
+
 @media (max-width: 900px) {
   h1 {
     font-size: 24px;
@@ -90,6 +123,9 @@ button:hover {
   }
   footer {
     padding-top: 20px;
+  }
+  button {
+    padding: 5px;
   }
   .container {
     max-width: 80%;
