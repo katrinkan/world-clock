@@ -13,6 +13,7 @@ body {
     #ecd837 80px
   );
 }
+
 h1 {
   font-size: 48px;
   font-family: "Codystar", cursive;
@@ -66,7 +67,7 @@ button:hover {
 
 .container {
   max-width: 40%;
-  margin: 60px auto 0 auto;
+  margin: 60px auto;
   background-color: black;
   padding: 20px;
   border-radius: 20px;
@@ -113,6 +114,9 @@ button:hover {
 .light a {
   color: black;
 }
+.light .city {
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.2);
+}
 
 @media (max-width: 900px) {
   h1 {
@@ -134,6 +138,7 @@ button:hover {
   .container-content {
     padding: 30px 0;
   }
+
   .time {
     font-size: 24px;
   }
