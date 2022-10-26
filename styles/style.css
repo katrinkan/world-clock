@@ -1,9 +1,26 @@
+html {
+  margin: 0;
+  padding: 0;
+}
 body {
-  background-color: #f9f7fe;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background: repeating-linear-gradient(
+    to right,
+    #ea9aba 0px,
+    #ea9aba 40px,
+    #ecd837 40px,
+    #ecd837 80px
+  );
 }
 h1 {
-  font-size: 36px;
+  font-size: 48px;
+  font-family: "Codystar", cursive;
+  padding-bottom: 20px;
+}
+h1 a {
+  text-decoration: none;
+  color: white;
 }
 select {
   display: block;
@@ -11,35 +28,50 @@ select {
   padding: 10px;
   border-radius: 4px;
   font-size: 18px;
+  font-family: "Poppins", sans-serif;
 }
 h2 {
   margin: 0 0 5px;
   font-size: 28px;
+  font-weight: 400;
 }
 footer {
+  padding-top: 40px;
   text-align: center;
   color: rgba(0, 0, 0, 0.8);
 }
+button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 10px;
+  border-radius: 30px;
+  font-size: 14px;
+  background-color: #ea9aba;
+  border: 1px solid black;
+  color: white;
+}
+button:hover {
+  background-color: #ecd837;
+}
 .container {
-  max-width: 600px;
-  margin: 60px auto;
-  background-color: white;
+  max-width: 40%;
+  margin: 60px auto 0 auto;
+  background-color: black;
   padding: 60px;
-  border-radius: 8px;
+  border-radius: 20px;
 }
 .city {
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
-  padding: 30px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  padding: 10px 0;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.2);
 }
 .city:last-child {
   border: none;
 }
 .time {
   font-size: 48px;
-  font-weight: bold;
 }
 .time small {
   font-size: 24px;
@@ -48,4 +80,31 @@ footer {
 }
 .date {
   opacity: 0.7;
+}
+@media (max-width: 900px) {
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 16px;
+  }
+  footer {
+    padding-top: 20px;
+  }
+  .container {
+    max-width: 80%;
+    margin: 100px auto 0 auto;
+    padding: 20px;
+    overflow: hidden;
+  }
+  .time {
+    font-size: 24px;
+  }
+  .time small {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .date {
+    font-size: 14px;
+  }
 }

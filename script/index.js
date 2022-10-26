@@ -1,7 +1,10 @@
 const barcelonaElement = document.querySelector("#barcelona");
 const hongKongElement = document.querySelector("#hong-kong");
+const aucklandElement = document.querySelector("#auckland");
 
 function updateTime() {
+  // current location
+
   // Barcelona
   if (barcelonaElement) {
     const barcelonaDateElement = barcelonaElement.querySelector(".date");
@@ -13,6 +16,16 @@ function updateTime() {
     )}`;
   }
 
+  // Auckland
+  if (aucklandElement) {
+    const aucklandDateElement = aucklandElement.querySelector(".date");
+    const aucklandTimeElement = aucklandElement.querySelector(".time");
+    const aucklandTime = moment().tz("Pacific/Auckland");
+    aucklandDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    aucklandTimeElement.innerHTML = `${aucklandTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    )}`;
+  }
   //Hong Kong
   if (hongKongElement) {
     const hongKongDateElement = hongKongElement.querySelector(".date");
@@ -41,13 +54,14 @@ function updateCity(event) {
     const citiesElement = document.querySelector("#cities");
     citiesElement.innerHTML = `<div class="city" id="hong-kong">
           <div>
-            <h2>${cityName}</h2>
+            <h2>${cityName} 🌎</h2>
             <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
           </div>
           <div class="time">${cityTime.format(
             "h:mm:ss [<small>]A[</small>]"
           )}</div>
-        </div>`;
+        </div>
+        <button type='button' onclick='window.location.reload()'>Back to all cities</button>`;
   }
   displayNewTime();
   setInterval(displayNewTime, 1000);
